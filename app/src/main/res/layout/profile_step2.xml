@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pmakkaraphon.prospects.ProfileS2Activity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/margin_logo"
+        android:src="@drawable/lpark_ph32_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:orientation="vertical"
+        android:id="@+id/step">
+        <TextView
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step2Head"
+            android:textColor="@color/tabcolor"
+            android:textSize="@dimen/textsizeHead_XL"/>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step1_pass"/>
+            <include
+                layout="@layout/line_pass"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step2_pass"/>
+            <include
+                layout="@layout/line"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step3"/>
+            <include
+                layout="@layout/line"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step4"/>
+            <include
+                layout="@layout/line"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step5"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/step"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_side"
+            android:layout_marginRight="@dimen/margin_side"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblIdHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="บ้านเลขที่ :"
+                    android:textSize="@dimen/textsize" />
+
+                <EditText
+                    android:id="@+id/txtIdHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblMu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="หมู่ :"
+                    android:textSize="@dimen/textsize" />
+
+                <EditText
+                    android:id="@+id/txtMu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@drawable/rounded_edittext"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBuild"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="หมู่บ้าน/อาคาร :"
+                    android:textSize="@dimen/textsize" />
+
+                <EditText
+                    android:id="@+id/txtฺBuild"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblSoi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="ตรอก/ซอย :"
+                    android:textSize="@dimen/textsize" />
+
+                <EditText
+                    android:id="@+id/txtSoi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblRoad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="ถนน :"
+                    android:textSize="@dimen/textsize" />
+
+                <EditText
+                    android:id="@+id/txtRoad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_paragraph"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="จังหวัด :"
+                    android:textSize="@dimen/textsize" />
+
+                <Spinner
+                    android:id="@+id/txtCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/campaign"
+                    android:textSize="@dimen/textsize"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_paragraph"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblState"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="อำเภอ/เขต :"
+                    android:textSize="@dimen/textsize" />
+
+                <Spinner
+                    android:id="@+id/txtState"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/campaign"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_paragraph"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="ตำบล/แขวง :"
+                    android:textSize="@dimen/textsize" />
+
+                <Spinner
+                    android:id="@+id/txtDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/campaign"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_paragraph"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblPostcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="รหัสไปรษณีย์ :"
+                    android:textSize="@dimen/textsize" />
+
+                <EditText
+                    android:id="@+id/txtPostcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@drawable/rounded_edittext"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnNextS2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:background="@color/colorButton"
+                    android:text="Submit"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

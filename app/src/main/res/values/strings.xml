@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">บันทึกข้อมูล และ ติดตาม ลูกค้า</string>
+
+    <string name="step1Head">ข้อมูลส่วนตัว</string>
+    <string name="step2Head">ที่อยู่ตามบัตรประชาชน</string>
+    <string name="step3Head">ที่อยู่ปัจจุบัน</string>
+    <string name="step4Head">ที่อยู่สถานที่ทำงาน</string>
+    <string name="step5Head">แบบสอบถาม</string>
+
+    <string-array name="prefix">
+        <item>--กรุณาเลือก--</item>
+        <item>นาย</item>
+        <item>นาง</item>
+        <item>นางสาว</item>
+    </string-array>
+
+    <string-array name="campaign">
+        <item>--กรุณาเลือก--</item>
+    </string-array>
+
+    <string-array name="niti">
+        <item>--กรุณาเลือก--</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pmakkaraphon.prospects.QuestionS1Activity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/margin_logo"
+        android:src="@drawable/lpark_ph32_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:orientation="vertical"
+        android:id="@+id/step">
+        <TextView
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/step5Head"
+            android:textColor="@color/tabcolor"
+            android:textSize="@dimen/textsizeHead_XL"/>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step1_pass"/>
+            <include
+                layout="@layout/line_pass"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step2_pass"/>
+            <include
+                layout="@layout/line_pass"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step3_pass"/>
+            <include
+                layout="@layout/line_pass"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step4_pass"/>
+            <include
+                layout="@layout/line_pass"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_step5_pass"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/step">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_side"
+            android:layout_marginRight="@dimen/margin_side"
+            android:orientation="vertical">
+
+            <!--อาชีพ-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblOcu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="อาชีพ "
+                        android:textSize="@dimen/textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#fd4040"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+
+                <RadioGroup
+                    android:id="@+id/txtOcg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="@dimen/textsize"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/ROc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="พนักงานบริษัทเอกชน"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/ROc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="พนักงานรัฐวิสาหกิจ"
+                        android:textSize="@dimen/textsize" />
+
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/txtOcg2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:textSize="@dimen/textsize"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/ROc3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="ข้าราชการ"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/ROc4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="เจ้าของกิจการ"
+                        android:textSize="@dimen/textsize" />
+
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/txtOcg3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ROc5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="อื่น ๆ"
+                        android:textSize="@dimen/textsize" />
+
+                    <EditText
+                        android:id="@+id/txtOcEtc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/space"
+                        android:layout_marginLeft="@dimen/space"
+                        android:layout_marginRight="@dimen/margin_side"
+                        android:visibility="invisible"
+                        android:background="@drawable/rounded_edittext"
+                        android:hint=" โปรดระบุ"
+                        android:textSize="@dimen/textsize" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+            <!--อายุ-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="อายุ "
+                        android:textSize="@dimen/textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#fd4040"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+
+                <RadioGroup
+                    android:id="@+id/RAgeG1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:textSize="@dimen/textsize"
+                    android:weightSum="4">
+
+                    <RadioButton
+                        android:id="@+id/RAge1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="20 - 30 ปี"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/RAge2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="31 - 45 ปี"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/RAge3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="46 - 55 ปี"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/RAge4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="56 ปีขึ้นไป"
+                        android:textSize="@dimen/textsize" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--สถานภาพ-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblDatesave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="สถานภาพ "
+                        android:textSize="@dimen/textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#fd4040"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+                <!--<TextView-->
+                <!--android:id="@+id/lblDatesave"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="สถานภาพ :"-->
+                <!--android:textSize="@dimen/textsize" />-->
+
+                <RadioGroup
+                    android:id="@+id/txtStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:textSize="@dimen/textsize"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/txtStSingle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="โสด"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/txtStMarry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="สมรส"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/txtStDivorce"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="หย่าร้าง"
+                        android:textSize="@dimen/textsize" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <!--หาก-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="หากท่านตัดสินใจซื้อที่อยู่อาศัย ท่านคิดว่าท่านมีกำลังผ่อนต่อเดือน "
+                        android:textSize="@dimen/textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#fd4040"
+                        android:textSize="@dimen/textsize" />
+
+                    <EditText
+                        android:id="@+id/txtPrefix"
+                        android:layout_width="@dimen/edt_s"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/space"
+                        android:background="@drawable/rounded_edittext"
+                        android:inputType="number"
+                        android:textSize="@dimen/textsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=" บาท" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--ลักษณะที่อยู่-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblHomeGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ลักษณะที่อยู่ปัจจุบัน "
+                        android:textSize="@dimen/textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#fd4040"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/txtHomeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:textSize="@dimen/textsize"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/txtG1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="บ้านตนเอง"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/txtG2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="อาศัยอยู่กับญาติ"
+                        android:textSize="@dimen/textsize" />
+
+                    <RadioButton
+                        android:id="@+id/txtG3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="เช่าอยู่"
+                        android:textSize="@dimen/textsize" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--จำนวนสมาชิก-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/lbAmout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="จำนวนสมาชิกในครอบครัว(รวมตัวท่านด้วย)ทั้งหมด "
+                    android:textSize="@dimen/textsize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="*"
+                    android:textColor="#fd4040"
+                    android:textSize="@dimen/textsize" />
+
+                <EditText
+                    android:id="@+id/txtAmout"
+                    android:layout_width="@dimen/edt_s"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space"
+                    android:background="@drawable/rounded_edittext"
+                    android:inputType="number"
+                    android:textSize="@dimen/textsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=" ท่าน" />
+
+            </LinearLayout>
+
+            <!--ภาระค่าใช้จ่าย-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lbl7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ภาระค่าใช้จ่ายหลักของท่านในปัจจุบัน กรุณาระบุน้ำหนักค่าใช้จ่าย แบ่งมากน้อยตาม % (เลือกได้มากกว่า 1 ข้อ)*"
+                    android:textSize="@dimen/textsize"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_top_inLine"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ผ่อนรถยนต์" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/txtDcar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+                                android:id="@+id/lblDc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=" บ./ด."
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lblDcc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="( "
+                                android:textSize="@dimen/textsize" />
+
+                            <EditText
+                                android:id="@+id/txtPDcar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+                                android:id="@+id/lblPDc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=" %)"
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_top_inLine"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ผ่อนบัตรเครดิต" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/txtDcre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+                                android:id="@+id/lblDcre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=" บ./ด."
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="( "
+                                android:textSize="@dimen/textsize" />
+
+                            <EditText
+                                android:id="@+id/txtPDcre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=" %)"
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_top_inLine"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ผ่อนบ้าน" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/txtDhome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=" บ./ด."
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="( "
+                                android:textSize="@dimen/textsize" />
+
+                            <EditText
+                                android:id="@+id/txtPDhome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=" %)"
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_top_inLine"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ค่าเช่าต่าง ๆ" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/txtDoth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=" บ./ด."
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="( "
+                                android:textSize="@dimen/textsize" />
+
+                            <EditText
+                                android:id="@+id/txtPDOth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=" %)"
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_top_inLine"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="ค่าใช้จ่ายอื่น ๆ" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/txtDetc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=" บ./ด."
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="( "
+                                android:textSize="@dimen/textsize" />
+
+                            <EditText
+                                android:id="@+id/txtPDetc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:inputType="number"
+                                android:background="@drawable/rounded_edittext"
+                                android:textSize="@dimen/textsize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=" %)"
+                                android:textSize="@dimen/textsize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lbl8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ขนาดห้องชุดที่ท่านสนใจ"
+                        android:textSize="@dimen/textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#fd4040"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radio_Size_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top_inLine"
+                    android:orientation="vertical"
+                    android:textSize="@dimen/textsize">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/size1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:checked="true"
+                            android:text="แบบ 1 ห้องนอน 1 ห้องน้ำ ขนาดต่ำที่สุดที่ต้องการ"
+                            android:textSize="@dimen/textsize" />
+
+                        <EditText
+                            android:id="@+id/editText"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rounded_edittext" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="ตร.ม" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_top_inLine"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/size2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="แบบ 2 ห้องนอน 2 ห้องน้ำ ขนาดต่ำที่สุดที่ต้องการ"
+                            android:textSize="@dimen/textsize" />
+
+                        <EditText
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/space"
+                            android:layout_marginRight="@dimen/space"
+                            android:background="@drawable/rounded_edittext" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="ตร.ม" />
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="สื่อโฆษณาที่นำพาท่านเข้าชมโครงการ (เลือกได้มากกว่า 1 สื่อ) สื่อ Offline "
+                        android:textSize="@dimen/textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#fd4040"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="ลูกค้าเก่า" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="2"
+                        android:text="เพื่อน/ญาติ/เจ้าหน้าที่ แนะนำ" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="ใบปลิว" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SMS แจ้งข่าว" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="รถแห่กระจายเสียง" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="รถไฟฟ้า BTS/MRT" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="รถตู้/รถสองแถว" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="ข่าว PR" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top_inLine"
+                    android:orientation="horizontal"
+                    >
+                    <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:text="Direct Sales" />
+
+                    <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:text="สำนักงานขาย ฟิวเจอร์พาร์ค รังสิต" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="ป้าย บริเวณ/แถวโครงการ" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="@dimen/edt_s"
+                            android:layout_marginLeft="@dimen/space"
+                            android:layout_height="match_parent"
+                            android:hint="โปรดระบุ"
+                            android:background="@drawable/rounded_edittext"
+                            android:textSize="@dimen/textsize" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top_inLine"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="อื่น ๆ" />
+
+                        <EditText
+                            android:layout_width="@dimen/edt_s"
+                            android:layout_marginLeft="@dimen/space"
+                            android:layout_height="match_parent"
+                            android:hint="โปรดระบุ"
+                            android:background="@drawable/rounded_edittext"
+                            android:textSize="@dimen/textsize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_top_inLine"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="สื่อโฆษณาที่นำพาท่านเข้าชมโครงการ (เลือกได้มากกว่า 1 สื่อ) สื่อ Online "
+                            android:textSize="@dimen/textsize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="#fd4040"
+                            android:textSize="@dimen/textsize" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/margin_top_inLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="หาข้อมูลจาก Google" />
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:text="Facebook" />
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Instagram" />
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Mobile App (LPN Care)" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Website" />
+
+                        <EditText
+                            android:layout_width="@dimen/edt_s"
+                            android:layout_marginLeft="@dimen/space"
+                            android:hint="โปรดระบุ"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_edittext"
+                            android:textSize="@dimen/textsize" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="อื่น ๆ" />
+
+                        <EditText
+                            android:layout_width="@dimen/edt_s"
+                            android:layout_marginLeft="@dimen/space"
+                            android:hint="โปรดระบุ"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_edittext"
+                            android:textSize="@dimen/textsize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_top_inLine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="เข้าชมโครงการเป็นครั้งที่ (ในกรณีท่านที่จองโครงการแล้ว กรอกครั้งที่ตัดสินใจจอง) "
+                        android:textSize="@dimen/textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#fd4040"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <EditText
+                    android:layout_marginTop="@dimen/margin_top_inLine"
+                    android:id="@+id/edt_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_edittext"
+                    android:textSize="@dimen/textsize" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_side"
+                android:layout_marginRight="@dimen/margin_side"
+                android:layout_marginBottom="@dimen/margin_side"
+                android:id="@+id/btnNextS1"
+                android:background="@color/colorButton"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
