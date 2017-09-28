@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.pmakkaraphon.prospects.API.ConnectionManager;
 import com.example.pmakkaraphon.prospects.API.OnNetworkCallbackListener;
+import com.example.pmakkaraphon.prospects.Model.DistictModel;
 import com.example.pmakkaraphon.prospects.Model.PrenameModel;
 import com.example.pmakkaraphon.prospects.Model.User;
 import com.squareup.okhttp.ResponseBody;
@@ -27,7 +28,7 @@ public class ProfileS1Activity extends AppCompatActivity {
     ConnectionManager connect = new ConnectionManager();
     OnNetworkCallbackListener networkCallbackListener = new OnNetworkCallbackListener() {
         @Override
-        public void onResponse(List<PrenameModel> model, Retrofit retrofit){
+        public void onResponsePre(List<PrenameModel> model, Retrofit retrofit){
             for (int i = 0;i<model.size();i++){
                 Log.d(TAG,model.get(i).getPN_NAME().toString()+" "+model.get(i).getPN_CODE().toString());
             }
@@ -37,6 +38,11 @@ public class ProfileS1Activity extends AppCompatActivity {
         public void onResponse(User user, Retrofit retrofit) {
 
                 Log.d(TAG,user.getName()+" "+user.getLastname().toString());
+
+        }
+
+        @Override
+        public void onResponseDis(List<DistictModel> user, Retrofit retrofit) {
 
         }
 

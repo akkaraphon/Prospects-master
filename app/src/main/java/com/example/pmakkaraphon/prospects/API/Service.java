@@ -1,5 +1,6 @@
 package com.example.pmakkaraphon.prospects.API;
 
+import com.example.pmakkaraphon.prospects.Model.DistictModel;
 import com.example.pmakkaraphon.prospects.Model.PrenameModel;
 import com.example.pmakkaraphon.prospects.Model.User;
 
@@ -21,5 +22,9 @@ public interface Service {
     @FormUrlEncoded
     @POST("postCheckName")
     Call<User> updateUser(@Field("name") String name, @Field("lastname") String lastname);
+
+    @FormUrlEncoded
+    @POST("getDistrict")
+    Call<List<DistictModel>> getDistrict(@Field("PV_CODE") String disname);
 
 }

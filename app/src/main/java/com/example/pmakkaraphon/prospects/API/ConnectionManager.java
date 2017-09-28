@@ -48,7 +48,7 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
                     }
                 } else {
                     //200
-                    listener.onResponse( model, retrofit);
+                    listener.onResponsePre( model, retrofit);
                 }
             }
 
@@ -85,4 +85,32 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
             }
         });
     }
+    public void postDis(final OnNetworkCallbackListener listener,String dis){
+        Call call = git.getDistrict(dis);
+        call.enqueue(new Callback<List<DistictModel>>() {
+            @Override
+            public void onResponse(Response<List<DistictModel>> response, Retrofit retrofit) {
+
+                List<DistictModel> dis = response.body();
+                if (dis == null) {
+                    //404 or the response cannot be converted to User.
+                    ResponseBody responseBody = response.errorBody();
+                    if (responseBody != null) {
+                        listener.onBodyError(responseBody);
+                    } else {
+                        listener.onBodyErrorIsNull();
+                    }
+                } else {
+                    //200
+                    listener.onResponseDis( dis, retrofit);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                Log.d("POON TEST",t.toString());
+            }
+        });
+    }
+
 }

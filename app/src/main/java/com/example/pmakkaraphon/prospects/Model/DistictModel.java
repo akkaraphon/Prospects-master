@@ -1,21 +1,19 @@
 package com.example.pmakkaraphon.prospects.Model;
 
-import com.google.gson.annotations.Expose;
-
 public class DistictModel {
 
 
     /**
      * DT_CODE : 001
-     * DT_TNAME : คลองเตย
-     * DT_ZIP : 10110
+     * DT_TNAME : คลองหลวง
+     * DT_ZIP : 12120
+     * PV_CODE : PTT
      */
-    @Expose
+
     private String DT_CODE;
-    @Expose
     private String DT_TNAME;
-    @Expose
     private String DT_ZIP;
+    private String PV_CODE;
 
     public String getDT_CODE() {
         return DT_CODE;
@@ -39,5 +37,13 @@ public class DistictModel {
 
     public void setDT_ZIP(String DT_ZIP) {
         this.DT_ZIP = DT_ZIP;
+    }
+
+    public String getPV_CODE() {
+        return PV_CODE;
+    }
+
+    public void setPV_CODE(String PV_CODE) {
+        this.PV_CODE = PV_CODE;
     }
 }
