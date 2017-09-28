@@ -1,5 +1,7 @@
 package com.example.pmakkaraphon.prospects.Model;
 
+import com.google.gson.annotations.Expose;
+
 public class PrenameModel {
 
 
@@ -7,8 +9,9 @@ public class PrenameModel {
      * PN_CODE : 00
      * PN_NAME : คุณ
      */
-
+    @Expose
     private String PN_CODE;
+    @Expose
     private String PN_NAME;
 
     public String getPN_CODE() {

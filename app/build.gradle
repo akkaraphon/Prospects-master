@@ -22,9 +22,10 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     //retrofit2
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+
     //gson converter by retrofit
-    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'

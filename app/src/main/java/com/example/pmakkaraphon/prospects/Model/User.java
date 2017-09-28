@@ -1,7 +1,11 @@
 package com.example.pmakkaraphon.prospects.Model;
 
+import com.google.gson.annotations.Expose;
+
 public class User {
+    @Expose
     private String name;
+    @Expose
     private String lastname;
 
     public String getName() {

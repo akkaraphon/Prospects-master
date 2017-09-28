@@ -1,5 +1,7 @@
 package com.example.pmakkaraphon.prospects.Model;
 
+import com.google.gson.annotations.Expose;
+
 public class DistictModel {
 
 
@@ -8,9 +10,11 @@ public class DistictModel {
      * DT_TNAME : คลองเตย
      * DT_ZIP : 10110
      */
-
+    @Expose
     private String DT_CODE;
+    @Expose
     private String DT_TNAME;
+    @Expose
     private String DT_ZIP;
 
     public String getDT_CODE() {

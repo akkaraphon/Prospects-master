@@ -1,29 +1,61 @@
 package com.example.pmakkaraphon.prospects;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.pmakkaraphon.prospects.API.ConnectionManager;
 import com.example.pmakkaraphon.prospects.API.OnNetworkCallbackListener;
+import com.example.pmakkaraphon.prospects.Model.PrenameModel;
 import com.example.pmakkaraphon.prospects.Model.User;
+import com.squareup.okhttp.ResponseBody;
 
-import org.w3c.dom.Text;
 
-import okhttp3.ResponseBody;
-import retrofit2.Retrofit;
+import java.util.List;
+
+import retrofit.Retrofit;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class ProfileS1Activity extends AppCompatActivity {
-    OnNetworkCallbackListener networkCallbackListener;
+    String TAG = "POON TEST";
     Button mSubmit;
     TextView name;
     TextView lastname;
+    ConnectionManager connect = new ConnectionManager();
+    OnNetworkCallbackListener networkCallbackListener = new OnNetworkCallbackListener() {
+        @Override
+        public void onResponse(List<PrenameModel> model, Retrofit retrofit){
+            for (int i = 0;i<model.size();i++){
+                Log.d(TAG,model.get(i).getPN_NAME().toString()+" "+model.get(i).getPN_CODE().toString());
+            }
+
+        }
+        @Override
+        public void onResponse(User user, Retrofit retrofit) {
+
+                Log.d(TAG,user.getName()+" "+user.getLastname().toString());
+
+        }
+
+        @Override
+        public void onBodyError(ResponseBody responseBodyError) {
+            Log.d(TAG,"ERROR"+responseBodyError.toString());
+
+        }
+
+        @Override
+        public void onBodyErrorIsNull() {
+            Log.d(TAG,"NULL!!!!!!");
+        }
+
+        @Override
+        public void onFailure(Throwable t) {
+            Log.d(TAG,"Fail"+t.toString());
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -44,30 +76,12 @@ public class ProfileS1Activity extends AppCompatActivity {
 //                Intent intent = new Intent(ProfileS1Activity.this, ProfileS2Activity.class);
 //                startActivity(intent);
 //                overridePendingTransition(R.anim.anim_slide_in_left,R.anim.anim_slide_out_left);
-                new ConnectionManager().callServer(networkCallbackListener,name.getText().toString(),lastname.getText().toString());
+                Log.d(TAG,"Press Button");
+//               connect.callServer(networkCallbackListener);
+                connect.postName(networkCallbackListener,"Witchapon","Pimrat");
             }
         });
-        networkCallbackListener = new OnNetworkCallbackListener() {
-            @Override
-            public void onResponse(User user, Retrofit retrofit) {
-                Log.d("Poon",user.getName()+" "+user.getLastname());
-            }
 
-            @Override
-            public void onBodyError(ResponseBody responseBodyError) {
-
-            }
-
-            @Override
-            public void onBodyErrorIsNull() {
-
-            }
-
-            @Override
-            public void onFailure(Throwable t) {
-
-            }
-        };
     }
     @Override
     public void onBackPressed() {
