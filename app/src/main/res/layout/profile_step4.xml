@@ -128,7 +128,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <EditText
-                    android:id="@+id/txtIdHomeCompeny"
+                    android:id="@+id/txtIdHomeCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -152,7 +152,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <EditText
-                    android:id="@+id/txtMuCompeny"
+                    android:id="@+id/txtMuCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -177,7 +177,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <EditText
-                    android:id="@+id/txtฺBuildCompeny"
+                    android:id="@+id/txtฺBuildCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -201,7 +201,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <EditText
-                    android:id="@+id/txtSoiCompeny"
+                    android:id="@+id/txtSoiCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -225,7 +225,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <EditText
-                    android:id="@+id/txtRoadCompeny"
+                    android:id="@+id/txtRoadCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -249,7 +249,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <Spinner
-                    android:id="@+id/txtCityCompeny"
+                    android:id="@+id/spCityCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -273,7 +273,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <Spinner
-                    android:id="@+id/txtStateCompeny"
+                    android:id="@+id/spStateCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -297,7 +297,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <Spinner
-                    android:id="@+id/txtDistrictCompeny"
+                    android:id="@+id/spDistrictCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -321,7 +321,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <EditText
-                    android:id="@+id/txtPostcodeCompeny"
+                    android:id="@+id/txtPostcodeCom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -334,7 +334,7 @@
 
                 <Button
                     android:id="@+id/btnNextS4"
-                    android:layout_marginTop="@dimen/fist_line"
+                    android:layout_margin="@dimen/margin_top"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorButton"

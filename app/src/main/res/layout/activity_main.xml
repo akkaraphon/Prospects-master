@@ -47,7 +47,7 @@
                 android:textSize="@dimen/textsize" />
 
             <EditText
-                android:id="@+id/txtName"
+                android:id="@+id/txtUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
@@ -72,10 +72,11 @@
                 android:textSize="@dimen/textsize" />
 
             <EditText
-                android:id="@+id/txtLastname"
+                android:id="@+id/txtPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
+                android:inputType="textPassword"
                 android:background="@drawable/rounded_edittext"
                 android:textSize="@dimen/textsize" />
 

@@ -311,7 +311,7 @@
                 <!--android:textSize="@dimen/textsize" />-->
 
                 <RadioGroup
-                    android:id="@+id/txtStatus"
+                    android:id="@+id/RStatusG1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -319,7 +319,7 @@
                     android:weightSum="3">
 
                     <RadioButton
-                        android:id="@+id/txtStSingle"
+                        android:id="@+id/RstSingle"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -328,7 +328,7 @@
                         android:textSize="@dimen/textsize" />
 
                     <RadioButton
-                        android:id="@+id/txtStMarry"
+                        android:id="@+id/RstMarry"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -336,7 +336,7 @@
                         android:textSize="@dimen/textsize" />
 
                     <RadioButton
-                        android:id="@+id/txtStDivorce"
+                        android:id="@+id/RstDivorce"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -423,7 +423,7 @@
                 </LinearLayout>
 
                 <RadioGroup
-                    android:id="@+id/txtHomeGroup"
+                    android:id="@+id/RHomeGroupG1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -431,7 +431,7 @@
                     android:weightSum="3">
 
                     <RadioButton
-                        android:id="@+id/txtG1"
+                        android:id="@+id/Rh1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -440,7 +440,7 @@
                         android:textSize="@dimen/textsize" />
 
                     <RadioButton
-                        android:id="@+id/txtG2"
+                        android:id="@+id/Rh2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -448,7 +448,7 @@
                         android:textSize="@dimen/textsize" />
 
                     <RadioButton
-                        android:id="@+id/txtG3"
+                        android:id="@+id/Rh3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -527,6 +527,7 @@
                         android:weightSum="3">
 
                         <CheckBox
+                            android:id="@+id/Chk1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -595,6 +596,7 @@
                         android:weightSum="3">
 
                         <CheckBox
+                            android:id="@+id/Chk2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -661,6 +663,7 @@
                         android:weightSum="3">
 
                         <CheckBox
+                            android:id="@+id/Chk3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -726,6 +729,7 @@
                         android:weightSum="3">
 
                         <CheckBox
+                            android:id="@+id/Chk4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -793,6 +797,7 @@
                         android:weightSum="3">
 
                         <CheckBox
+                            android:id="@+id/Chk5"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -898,7 +903,7 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/size1"
+                            android:id="@+id/Rsize1"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:checked="true"
@@ -926,7 +931,7 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/size2"
+                            android:id="@+id/Rsize2"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="แบบ 2 ห้องนอน 2 ห้องน้ำ ขนาดต่ำที่สุดที่ต้องการ"
@@ -980,12 +985,14 @@
                     android:orientation="horizontal">
 
                     <CheckBox
+                        android:id="@+id/Chkk1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="ลูกค้าเก่า" />
 
                     <CheckBox
+                        android:id="@+id/Chkk2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -993,12 +1000,14 @@
                         android:text="เพื่อน/ญาติ/เจ้าหน้าที่ แนะนำ" />
 
                     <CheckBox
+                        android:id="@+id/Chkk3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="ใบปลิว" />
 
                     <CheckBox
+                        android:id="@+id/Chkk4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -1011,24 +1020,28 @@
                     android:orientation="horizontal">
 
                     <CheckBox
+                        android:id="@+id/Chkk5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="รถแห่กระจายเสียง" />
 
                     <CheckBox
+                        android:id="@+id/Chkk6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="รถไฟฟ้า BTS/MRT" />
 
                     <CheckBox
+                        android:id="@+id/Chkk7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="รถตู้/รถสองแถว" />
 
                     <CheckBox
+                        android:id="@+id/Chkk8"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -1044,18 +1057,21 @@
                     android:orientation="horizontal"
                     >
                     <CheckBox
+                        android:id="@+id/Chkk9"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
 
                     android:text="Direct Sales" />
 
                     <CheckBox
+                        android:id="@+id/Chkk10"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
 
                     android:text="สำนักงานขาย ฟิวเจอร์พาร์ค รังสิต" />
 
                     <CheckBox
+                        android:id="@+id/Chkk11"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="ป้าย บริเวณ/แถวโครงการ" />
@@ -1082,6 +1098,7 @@
                     android:orientation="horizontal">
 
                     <CheckBox
+                        android:id="@+id/Chkk12"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="อื่น ๆ" />
@@ -1127,12 +1144,14 @@
                         android:orientation="horizontal">
 
                         <CheckBox
+                            android:id="@+id/Chkkk1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="หาข้อมูลจาก Google" />
 
                         <CheckBox
+                            android:id="@+id/Chkkk2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -1140,12 +1159,14 @@
                             android:text="Facebook" />
 
                         <CheckBox
+                            android:id="@+id/Chkkk3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="Instagram" />
 
                         <CheckBox
+                            android:id="@+id/Chkkk4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -1154,10 +1175,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-
                         android:orientation="horizontal">
 
                         <CheckBox
+                            android:id="@+id/Chkkk5"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="Website" />
@@ -1171,6 +1192,7 @@
                             android:textSize="@dimen/textsize" />
 
                         <CheckBox
+                            android:id="@+id/Chkkk6"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="อื่น ๆ" />

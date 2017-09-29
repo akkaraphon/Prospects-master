@@ -163,7 +163,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <EditText
-                    android:id="@+id/txtฺBuildCon"
+                    android:id="@+id/txtBuildCon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -235,7 +235,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <Spinner
-                    android:id="@+id/txtCityCon"
+                    android:id="@+id/spCityCon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -259,7 +259,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <Spinner
-                    android:id="@+id/txtStateCon"
+                    android:id="@+id/spStateCon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -283,7 +283,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <Spinner
-                    android:id="@+id/txtDistrictCon"
+                    android:id="@+id/spDistrictCon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -307,7 +307,7 @@
                     android:textSize="@dimen/textsize" />
 
                 <EditText
-                    android:id="@+id/txtPostcodeCon"
+                    android:id="@+id/txtZip_codeCon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
