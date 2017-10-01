@@ -112,8 +112,8 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
             }
         });
     }
-    public void postDis(final OnNetworkCallbackListener listener,String dis){
-        Call call = git.getDistrict(dis);
+    public void callDis(final OnNetworkCallbackListener listener,String pv_code){
+        Call call = git.getDistrict(pv_code);
         call.enqueue(new Callback<List<DistictModel>>() {
             @Override
             public void onResponse(Response<List<DistictModel>> response, Retrofit retrofit) {
