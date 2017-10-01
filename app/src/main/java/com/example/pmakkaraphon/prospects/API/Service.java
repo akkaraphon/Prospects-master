@@ -2,6 +2,7 @@ package com.example.pmakkaraphon.prospects.API;
 
 import com.example.pmakkaraphon.prospects.Model.DistictModel;
 import com.example.pmakkaraphon.prospects.Model.PrenameModel;
+import com.example.pmakkaraphon.prospects.Model.ProvinceModel;
 import com.example.pmakkaraphon.prospects.Model.User;
 
 import java.util.List;
@@ -18,6 +19,9 @@ public interface Service {
 
     @GET("getPrename")
     Call<List<PrenameModel>> getPrename();
+
+    @GET("getProvince")
+    Call<List<ProvinceModel>> getProvince();
 
     @FormUrlEncoded
     @POST("postCheckName")

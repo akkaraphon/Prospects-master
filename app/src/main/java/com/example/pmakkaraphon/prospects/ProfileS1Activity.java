@@ -16,6 +16,7 @@ import com.example.pmakkaraphon.prospects.API.ConnectionManager;
 import com.example.pmakkaraphon.prospects.API.OnNetworkCallbackListener;
 import com.example.pmakkaraphon.prospects.Model.DistictModel;
 import com.example.pmakkaraphon.prospects.Model.PrenameModel;
+import com.example.pmakkaraphon.prospects.Model.ProvinceModel;
 import com.example.pmakkaraphon.prospects.Model.User;
 import com.squareup.okhttp.ResponseBody;
 
@@ -45,6 +46,12 @@ public class ProfileS1Activity extends AppCompatActivity {
                 Log.d(TAG,model.get(i).getPN_NAME().toString()+" "+model.get(i).getPN_CODE().toString());
             }
         }
+
+        @Override
+        public void onResponsePro(List<ProvinceModel> provinceModels, Retrofit retrofit) {
+
+        }
+
         @Override
         public void onResponse(User user, Retrofit retrofit) {
 
@@ -73,6 +80,7 @@ public class ProfileS1Activity extends AppCompatActivity {
             Log.d(TAG,"Fail"+t.toString());
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -83,7 +91,7 @@ public class ProfileS1Activity extends AppCompatActivity {
                 .build());
         setContentView(R.layout.profile_step1);
 
-        connect.callServer(networkCallbackListener);
+        connect.callPrename(networkCallbackListener);
 
         name = (TextView)findViewById(R.id.txtName);
         lastname = (TextView)findViewById(R.id.txtLastname);
@@ -92,22 +100,9 @@ public class ProfileS1Activity extends AppCompatActivity {
 
         ArrayAdapter<String > adapter =
                 new ArrayAdapter<String>(this,R.layout.spinner_dropdown_item, preName);
+
         spPrename.setAdapter(adapter);
-
-        spPrename.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                spPrename.setSelection(i);
-                Toast.makeText(ProfileS1Activity.this,
-                        "Select : " + preName.get(i),
-                        Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
+        spPrename.setSelection(0);
 
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override

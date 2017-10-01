@@ -30,7 +30,7 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
             .addConverterFactory(GsonConverterFactory.create())
             .build();
     Service git = retrofit.create(Service.class);
-    public void callServer(final OnNetworkCallbackListener listener) {
+    public void callPrename(final OnNetworkCallbackListener listener) {
 
         Call call  = git.getPrename();
         call.enqueue(new Callback<List<PrenameModel>>() {
@@ -49,6 +49,33 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
                 } else {
                     //200
                     listener.onResponsePre( model, retrofit);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                listener.onFailure(t);
+            }
+        });
+    }
+    public void callProvince(final OnNetworkCallbackListener listener){
+        Call call  = git.getProvince();
+        call.enqueue(new Callback<List<ProvinceModel>>() {
+            @Override
+            public void onResponse(Response<List<ProvinceModel>> response, Retrofit retrofit) {
+                List<ProvinceModel> model = response.body();
+
+                if (model == null) {
+                    //404 or the response cannot be converted to User.
+                    ResponseBody responseBody = response.errorBody();
+                    if (responseBody != null) {
+                        listener.onBodyError(responseBody);
+                    } else {
+                        listener.onBodyErrorIsNull();
+                    }
+                } else {
+                    //200
+                    listener.onResponsePro( model, retrofit);
                 }
             }
 
