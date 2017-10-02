@@ -30,7 +30,7 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
             .addConverterFactory(GsonConverterFactory.create())
             .build();
     Service git = retrofit.create(Service.class);
-    public void callPrename(final OnNetworkCallbackListener listener) {
+    public void callPrename(final PreNameCallbackListener listener) {
 
         Call call  = git.getPrename();
         call.enqueue(new Callback<List<PrenameModel>>() {
@@ -48,7 +48,7 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
                     }
                 } else {
                     //200
-                    listener.onResponsePre( model, retrofit);
+                    listener.onResponse( model, retrofit);
                 }
             }
 
@@ -58,7 +58,7 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
             }
         });
     }
-    public void callProvince(final OnNetworkCallbackListener listener){
+    public void callProvince(final ProvinceCallbackListener listener){
         Call call  = git.getProvince();
         call.enqueue(new Callback<List<ProvinceModel>>() {
             @Override
@@ -75,7 +75,7 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
                     }
                 } else {
                     //200
-                    listener.onResponsePro( model, retrofit);
+                    listener.onResponse( model, retrofit);
                 }
             }
 
@@ -85,34 +85,8 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
             }
         });
     }
-    public void postName(final OnNetworkCallbackListener listener,String name, String lastname){
-        Call call = git.updateUser(name,lastname);
-        call.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Response<User> response, Retrofit retrofit) {
 
-                User user = response.body();
-                if (user == null) {
-                    //404 or the response cannot be converted to User.
-                    ResponseBody responseBody = response.errorBody();
-                    if (responseBody != null) {
-                        listener.onBodyError(responseBody);
-                    } else {
-                        listener.onBodyErrorIsNull();
-                    }
-                } else {
-                    //200
-                    listener.onResponse( user, retrofit);
-                }
-            }
-
-            @Override
-            public void onFailure(Throwable t) {
-                Log.d("POON TEST",t.toString());
-            }
-        });
-    }
-    public void callDis(final OnNetworkCallbackListener listener,String pv_code){
+    public void callDis(final DistictCallbackListener listener, String pv_code){
         Call call = git.getDistrict(pv_code);
         call.enqueue(new Callback<List<DistictModel>>() {
             @Override
@@ -129,7 +103,7 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
                     }
                 } else {
                     //200
-                    listener.onResponseDis( dis, retrofit);
+                    listener.onResponse( dis, retrofit);
                 }
             }
 
@@ -139,5 +113,6 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
             }
         });
     }
+
 
 }

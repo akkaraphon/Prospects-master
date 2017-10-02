@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.example.pmakkaraphon.prospects.API.ConnectionManager;
-import com.example.pmakkaraphon.prospects.API.OnNetworkCallbackListener;
+import com.example.pmakkaraphon.prospects.API.PreNameCallbackListener;
 import com.example.pmakkaraphon.prospects.Model.DistictModel;
 import com.example.pmakkaraphon.prospects.Model.PrenameModel;
 import com.example.pmakkaraphon.prospects.Model.ProvinceModel;
@@ -28,57 +28,12 @@ public class ProfileS2Activity extends AppCompatActivity {
     List<String> proName = new ArrayList<String>();
     ConnectionManager connect = new ConnectionManager();
     Button mSubmit;
-    OnNetworkCallbackListener networkCallbackListener = new OnNetworkCallbackListener() {
-        @Override
-        public void onResponsePre(List<PrenameModel> model, Retrofit retrofit){
 
-        }
-
-        @Override
-        public void onResponsePro(List<ProvinceModel> provinceModels, Retrofit retrofit) {
-            for (int i = 0;i<provinceModels.size();i++){
-                if (i==0){
-                    proName.add("--กรุณาเลือก--");
-                }
-                proName.add(provinceModels.get(i).getPV_TNAME().toString());
-                Log.d(TAG,provinceModels.get(i).getPV_TNAME().toString()+" "+provinceModels.get(i).getPV_CODE().toString());
-            }
-        }
-
-        @Override
-        public void onResponse(User user, Retrofit retrofit) {
-
-
-
-        }
-
-        @Override
-        public void onResponseDis(List<DistictModel> user, Retrofit retrofit) {
-
-        }
-
-        @Override
-        public void onBodyError(ResponseBody responseBodyError) {
-
-
-        }
-
-        @Override
-        public void onBodyErrorIsNull() {
-
-        }
-
-        @Override
-        public void onFailure(Throwable t) {
-
-        }
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_step2);
 
-        connect.callProvince(networkCallbackListener);
 
         spProname = (Spinner)findViewById(R.id.spCity);
 
