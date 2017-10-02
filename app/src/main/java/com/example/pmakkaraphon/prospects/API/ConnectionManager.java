@@ -113,6 +113,4 @@ String API ="http://rmis.lpn.co.th/prospect/api/";
             }
         });
     }
-
-
 }

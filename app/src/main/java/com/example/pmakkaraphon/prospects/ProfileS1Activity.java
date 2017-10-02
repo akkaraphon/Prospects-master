@@ -30,11 +30,7 @@ public class ProfileS1Activity extends AppCompatActivity {
     TextView name;
     TextView lastname;
     Spinner spPrename;
-    List<PrenameModel> prenameModels ;
-    ArrayList<String> preName = new ArrayList<String>() ;
-    ArrayList<String> item = new ArrayList<String>();
     ConnectionManager connect = new ConnectionManager();
-
     PreNameCallbackListener networkCallbackListener;
 
 
@@ -76,11 +72,6 @@ public class ProfileS1Activity extends AppCompatActivity {
         lastname = (TextView)findViewById(R.id.txtLastname);
         mSubmit = (Button) findViewById(R.id.btnNextS1);
 
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.spinner_dropdown_item, item );
-
-
-
-
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,32 +81,6 @@ public class ProfileS1Activity extends AppCompatActivity {
                 overridePendingTransition(R.anim.anim_slide_in_left,R.anim.anim_slide_out_left);
             }
         });
-    }
-
-
-
-    private void createItem() {
-
-        item.add("Air Force Central");
-        item.add("Army United");
-        item.add("Bangkok Glass");
-        item.add("Bangkok United");
-        item.add("BEC Tero");
-        item.add("Buriram United");
-        item.add("Chainat Hornbill");
-        item.add("Chiangrai United");
-        item.add("Chonburi");
-        item.add("Muangthong United");
-        item.add("Osotspa Saraburi");
-        item.add("Police United");
-        item.add("PTT Rayong");
-        item.add("Ratchaburi");
-        item.add("Samut Songkhram");
-        item.add("Singhtarua");
-        item.add("Sisaket");
-        item.add("Songkhla United");
-        item.add("Supanburi");
-        item.add("TOT Bangkok");
     }
 
     @Override

@@ -8,21 +8,17 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.pmakkaraphon.prospects.Model.PrenameModel;
+import com.example.pmakkaraphon.prospects.Model.ProvinceModel;
 import com.example.pmakkaraphon.prospects.R;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.pmakkaraphon.prospects.R.id.parent;
-
-public class CustomSpinner extends BaseAdapter {
+public class CustomProvinceSP extends BaseAdapter {
     private Context mContext;
-    private List<PrenameModel> mData;
+    private List<ProvinceModel> mData;
     private LayoutInflater mInflater;
 
-    public CustomSpinner(Context context, List<PrenameModel> data) {
+    public CustomProvinceSP(Context context, List<ProvinceModel> data) {
         mInflater = LayoutInflater.from(context);
         mContext = context;
         mData = data;
@@ -59,8 +55,8 @@ public class CustomSpinner extends BaseAdapter {
         TextView name;
         view = mInflater.inflate(R.layout.list_item_adapter, viewGroup, false);
         name = (TextView) view.findViewById(R.id.name);
+        name.setText(mData.get(i).getPV_TNAME());
 
-        name.setText(mData.get(i).getPN_NAME());
         return view;
     }
 

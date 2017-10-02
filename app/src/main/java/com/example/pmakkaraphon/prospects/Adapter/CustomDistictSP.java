@@ -7,22 +7,18 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.pmakkaraphon.prospects.Model.PrenameModel;
+import com.example.pmakkaraphon.prospects.Model.DistictModel;
+import com.example.pmakkaraphon.prospects.Model.ProvinceModel;
 import com.example.pmakkaraphon.prospects.R;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.pmakkaraphon.prospects.R.id.parent;
-
-public class CustomSpinner extends BaseAdapter {
+public class CustomDistictSP extends BaseAdapter {
     private Context mContext;
-    private List<PrenameModel> mData;
+    private List<DistictModel> mData;
     private LayoutInflater mInflater;
 
-    public CustomSpinner(Context context, List<PrenameModel> data) {
+    public CustomDistictSP(Context context, List<DistictModel> data) {
         mInflater = LayoutInflater.from(context);
         mContext = context;
         mData = data;
@@ -60,7 +56,8 @@ public class CustomSpinner extends BaseAdapter {
         view = mInflater.inflate(R.layout.list_item_adapter, viewGroup, false);
         name = (TextView) view.findViewById(R.id.name);
 
-        name.setText(mData.get(i).getPN_NAME());
+        name.setText(mData.get(i).getDT_TNAME());
+
         return view;
     }
 
