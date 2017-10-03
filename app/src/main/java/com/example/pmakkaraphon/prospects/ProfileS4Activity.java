@@ -22,7 +22,7 @@ public class ProfileS4Activity extends AppCompatActivity {
 
         final AlertDialog.Builder builder =
                 new AlertDialog.Builder(ProfileS4Activity.this);
-        builder.setMessage("ยืนยัน?");
+        builder.setMessage(R.string.dialog2);
         builder.setPositiveButton("ใช่", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 Intent intent = new Intent(ProfileS4Activity.this, QuestionS1Activity.class);

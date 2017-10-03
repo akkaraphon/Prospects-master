@@ -319,7 +319,7 @@
                     android:weightSum="3">
 
                     <RadioButton
-                        android:id="@+id/RstSingle"
+                        android:id="@+id/Rst1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -328,7 +328,7 @@
                         android:textSize="@dimen/textsize" />
 
                     <RadioButton
-                        android:id="@+id/RstMarry"
+                        android:id="@+id/Rst2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -336,7 +336,7 @@
                         android:textSize="@dimen/textsize" />
 
                     <RadioButton
-                        android:id="@+id/RstDivorce"
+                        android:id="@+id/Rst3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -431,7 +431,7 @@
                     android:weightSum="3">
 
                     <RadioButton
-                        android:id="@+id/Rh1"
+                        android:id="@+id/Rhome1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -440,7 +440,7 @@
                         android:textSize="@dimen/textsize" />
 
                     <RadioButton
-                        android:id="@+id/Rh2"
+                        android:id="@+id/Rhome2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -448,7 +448,7 @@
                         android:textSize="@dimen/textsize" />
 
                     <RadioButton
-                        android:id="@+id/Rh3"
+                        android:id="@+id/Rhome3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -1172,6 +1172,7 @@
                             android:layout_weight="1"
                             android:text="Mobile App (LPN Care)" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -1185,10 +1186,10 @@
 
                         <EditText
                             android:layout_width="@dimen/edt_s"
-                            android:layout_marginLeft="@dimen/space"
-                            android:hint="โปรดระบุ"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/space"
                             android:background="@drawable/rounded_edittext"
+                            android:hint="โปรดระบุ"
                             android:textSize="@dimen/textsize" />
 
                         <CheckBox
@@ -1199,10 +1200,10 @@
 
                         <EditText
                             android:layout_width="@dimen/edt_s"
-                            android:layout_marginLeft="@dimen/space"
-                            android:hint="โปรดระบุ"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/space"
                             android:background="@drawable/rounded_edittext"
+                            android:hint="โปรดระบุ"
                             android:textSize="@dimen/textsize" />
 
                     </LinearLayout>

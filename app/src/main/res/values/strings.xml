@@ -7,16 +7,8 @@
     <string name="step4Head">ที่อยู่สถานที่ทำงาน</string>
     <string name="step5Head">แบบสอบถาม</string>
 
-    <string-array name="prefix">
-        <item>--กรุณาเลือก--</item>
-    </string-array>
+    <string name="dialog1">ที่อยู่ปัจจุบันอาศัยอยู่ที่เดียวกับที่อยู่ตามบัตรประชาชนหรือไม่?</string>
+    <string name="dialog2">ยืนยัน?</string>
 
-    <string-array name="campaign">
-        <item>--กรุณาเลือก--</item>
-    </string-array>
-
-    <string-array name="niti">
-        <item>--กรุณาเลือก--</item>
-    </string-array>
 
 </resources>

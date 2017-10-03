@@ -15,17 +15,19 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".ProfileS1Activity" />
+        <activity android:name=".ProfileS2Activity" />
+        <activity android:name=".ProfileS3Activity" />
+        <activity android:name=".ProfileS4Activity" />
+        <activity android:name=".QuestionS1Activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileS1Activity" />
-        <activity android:name=".ProfileS2Activity" />
-        <activity android:name=".ProfileS3Activity" />
-        <activity android:name=".ProfileS4Activity" />
-        <activity android:name=".QuestionS1Activity" />
     </application>
 
 </manifest>
