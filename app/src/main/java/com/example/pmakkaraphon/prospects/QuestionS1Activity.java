@@ -17,7 +17,7 @@ public class QuestionS1Activity extends AppCompatActivity {
     RadioGroup rg2;
     RadioGroup rg3;
     RadioButton rOcItem1,rOcItem2,rOcItem3,rOcItem4,rOcItem5,rSize1,rSize2,rAge1,rAge2,rAge3,rAge4,rSt1,rSt2,rSt3;
-    CheckBox chk1,chk2,chk3,chk4,chk5,chk6,chk7,chk8,chk9,chk10,chk11,chk12,chkk1,chkk2,chkk3,chkk4,chkk5,chkk6;
+    CheckBox chk1,chk2,chk3,chk4,chk5,chkk1,chkk2,chkk3,chkk4,chkk5,chkk6,chkk7,chkk8,chkk9,chkk10,chkk11,chkk12,chkkk1,chkkk2,chkkk3,chkkk4,chkkk5,chkkk6;
     TextView txtOcetc;
     boolean isChecking = true;
 
@@ -79,28 +79,41 @@ public class QuestionS1Activity extends AppCompatActivity {
             }
         });
 
-
-
     }
     public void set(){
         txtOcetc = (TextView)findViewById(R.id.txtOcEtc);
 
         chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
-        chk1 = (CheckBox) findViewById(R.id.Chk1);
+        chk2 = (CheckBox) findViewById(R.id.Chk2);
+        chk3 = (CheckBox) findViewById(R.id.Chk3);
+        chk4 = (CheckBox) findViewById(R.id.Chk4);
+        chk5 = (CheckBox) findViewById(R.id.Chk5);
+
+        chkk1 = (CheckBox) findViewById(R.id.Chkk1);
+        chkk2 = (CheckBox) findViewById(R.id.Chkk2);
+        chkk3 = (CheckBox) findViewById(R.id.Chkk3);
+        chkk4 = (CheckBox) findViewById(R.id.Chkk4);
+        chkk5 = (CheckBox) findViewById(R.id.Chkk5);
+        chkk6 = (CheckBox) findViewById(R.id.Chkk6);
+        chkk7 = (CheckBox) findViewById(R.id.Chkk7);
+        chkk8 = (CheckBox) findViewById(R.id.Chkk8);
+        chkk9 = (CheckBox) findViewById(R.id.Chkk9);
+        chkk10 = (CheckBox) findViewById(R.id.Chkk10);
+        chkk11= (CheckBox) findViewById(R.id.Chkk11);
+        chkk12= (CheckBox) findViewById(R.id.Chkk12);
+
+        chkkk1 = (CheckBox) findViewById(R.id.Chkkk1);
+        chkkk2 = (CheckBox) findViewById(R.id.Chkkk2);
+        chkkk3 = (CheckBox) findViewById(R.id.Chkkk3);
+        chkkk4 = (CheckBox) findViewById(R.id.Chkkk4);
+        chkkk5 = (CheckBox) findViewById(R.id.Chkkk5);
+        chkkk6 = (CheckBox) findViewById(R.id.Chkkk6);
+
 
         rg1 = (RadioGroup)findViewById(R.id.txtOcg1);
         rg2 = (RadioGroup)findViewById(R.id.txtOcg2);
         rg3 = (RadioGroup)findViewById(R.id.txtOcg3);
+
         rSize1 = (RadioButton)findViewById(R.id.Rsize1);
         rSize2 = (RadioButton)findViewById(R.id.Rsize2);
         rOcItem1 = (RadioButton)findViewById(R.id.ROc1);
